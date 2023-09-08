@@ -1,15 +1,16 @@
-import { Button } from '@nextui-org/button'
 import LinksList from './components/links-list'
+import ModalLink from './components/modal-link'
+import AddLinkButton from './components/add-link-button'
 
 const LinksPage = async () => {
   return (
     <>
       <h1 className="font-extrabold text-4xl mb-5">Your links</h1>
-      <Button radius="full" color="secondary">
-        Add Link
-      </Button>
+      <AddLinkButton />
 
       <LinksList />
+
+      <ModalLink />
     </>
   )
 }

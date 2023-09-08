@@ -10,8 +10,15 @@ export const linkApi = createApi({
   endpoints: (builder) => ({
     getLinks: builder.query<LinkEntity[], null>({
       query: () => '/'
+    }),
+    addLink: builder.mutation<{ message: string, ok: boolean }, FormData>({
+      query: (data) => ({
+        url: '/',
+        method: 'POST',
+        body: data
+      })
     })
   })
 })
 
-export const { useGetLinksQuery } = linkApi
+export const { useGetLinksQuery, useAddLinkMutation } = linkApi

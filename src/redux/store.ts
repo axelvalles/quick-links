@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { linkApi, userApi } from './services'
+import { modalLink } from './features/modal-link-slice'
 import { setupListeners } from '@reduxjs/toolkit/dist/query'
 
 export const store = configureStore({
   reducer: {
+    [modalLink.name]: modalLink.reducer,
     [userApi.reducerPath]: userApi.reducer,
     [linkApi.reducerPath]: linkApi.reducer
   },
