@@ -17,6 +17,7 @@
     "@supabase/supabase-js": "2.33.1",
     "@tabler/icons-react": "2.32.0",
     "date-fns": "2.30.0",
+    "encoding": "^0.1.13",
     "framer-motion": "10.16.1",
     "nanoid": "4.0.2",
     "next": "13.4.19",
